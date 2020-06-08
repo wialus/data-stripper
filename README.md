@@ -26,22 +26,22 @@ A subset of [JSONPath](https://goessner.net/articles/JsonPath/) spec is supporte
 
 Examples:
 
-* `$.foo` would remove a `foo` from every record in a file
+* `$.foo` would remove `foo` from every record in a file
 
         {"foo": "bar", "baz": 42}
 
-    would turn into
+    would become
 
         {"baz": 42}
 
-* `$.foo.*.bar` would remove `bar` property from evey object inside a `$.foo` array
+* `$.foo.*.bar` would remove the `bar` property from evey object inside the `$.foo` array
 
         {"foo": [{"one": "two"}, {"bar": "three"}]}
 
-    would turn into
+    would become
 
         {"foo": [{"one": "two"}, {}]}
 
 ## --field syntax for CSV
 
-It simply is a column name.
+The column name to remove.
