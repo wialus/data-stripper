@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dockerfile_name=$(basename $DOCKERFILE_PATH)
+context_path=$(sed 's/[^\/]\+/../g' <<< $(dirname $DOCKERFILE_PATH))
+
+docker build --build-arg DOCKER_TAG=$DOCKER_TAG -t $IMAGE_NAME -f $dockerfile_name $context_path

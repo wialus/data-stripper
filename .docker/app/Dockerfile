@@ -5,7 +5,7 @@ COPY . /app
 
 FROM base AS build
 
-ENV DOCKER_TAG=0.0.0-dev
+ARG DOCKER_TAG=0.0.0-dev
 
 RUN CGO_ENABLED=0 go build -o data-stripper -ldflags "-X main.Version=${DOCKER_TAG}"
 
