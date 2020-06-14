@@ -72,7 +72,7 @@ Loop:
 			}
 
 			for _, el := range s {
-				if err := stripByJsonpath(el, path[ip+1:]); err != nil {
+				if err := stripByJsonpath(el, append([]string{"$"}, path[ip+1:]...)); err != nil {
 					return err
 				}
 			}

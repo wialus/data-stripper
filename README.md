@@ -14,7 +14,7 @@ A tool to remove fields from CSV or ndjson formatted files.
 
 ## Running
 
-    docker run --rm -u $(id -u):$(id -g) -v $(pwd):/data wialus/data-stripper:1.0.0 --in=/data/in.json --out=/data/out.json --field='$.field_name'
+    docker run --rm -u $(id -u):$(id -g) -v $(pwd):/data wialus/data-stripper:1.0.1 --in=/data/in.json --out=/data/out.json --field='$.field_name'
 
 ## --field syntax for NDJSON
 
